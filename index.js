@@ -20,4 +20,4 @@ app.post('/echo', function (req, res) {
     res.send(`Return is ${req.body}`)
 })
 
-http.createServer(app).listen(3000)
+http.createServer(app).listen(process.env.PORT || 3000)
