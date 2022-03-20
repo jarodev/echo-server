@@ -11,10 +11,8 @@ app.use(bodyParser.text({
 }))
 
 app.post('/echo', function (req, res) {
-    // console.log(`body: ${req.body}`);
     res = res.status(200);
     if(req.get('Content-Type')){
-        // console.log("Content-Type: "+req.get('Content-Type'))
         res = res.type(req.get('Content-Type'))
     }
     res.send(`Return is ${req.body}`)
